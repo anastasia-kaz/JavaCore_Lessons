@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>cv</title>
+</head>
+<body class="wrapper">
+<header>
+    <div class="overlay">
+        <div>
+            <img src="img/photo_2021-10-01_11-47-11.jpg" alt="photo" class="header_photo">
+        </div>
+        <div>
+        <h1 class="header_title">
+            Kazachonok Anastasia
+        </h1>
+        <h2 class="header_subtitle">
+            Junior Frontend Developer
+        </h2>
+        </div>
+    </div>
+</header>
+
+    <div class="content">
+        <aside class="aside_boxes">
+
+        <div class="aside_box">
+            <h2 class="aside_boxes_name">Contact</h2>
+            <div class="aside_boxes_name_line"></div>
+            <ul class="aside_box_contact_list">
+                <a href="tel:375447259141"> <li class="tel">+375 (44) 725 91 41</li></a>
+                <a href="mail:anastasia-kaz@mail.ru"><li class="mail">anastasia-kaz@mail.ru</li></a>
+                <a href="tg:anastasia-kaz>"><li class="telega">Telegram</li></a>
+                <a href="https://www.linkedin.com/in/anastasia-kaz" target="_blank"><li class="linked">LinkedIn</li></a>
+                <a href="https://github.com/anastasia-kaz" target="_blank"><li class="github">GitHub</li></a>
+                <li class="location">Minsk, Belarus</li>
+            </ul>
+        </div>
+
+        <div class="aside_box">
+            <h2 class="aside_boxes_name">Education</h2>
+            <div class="aside_boxes_name_line"></div>
+            <ul class="aside_box_education_list">
+                <li>Belarusian State Academy of Communications <br>
+                    Specialty: postal engineer
+                </li>
+                <li>Minsk State College of Services<br>
+                    Specialty: postal communication technician
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="aside_box">
+            <h2 class="aside_boxes_name">Courses</h2>
+            <div class="aside_boxes_name_line"></div>
+            <ul class="aside_box_education_list">
+                <li>V.Ksenzov's author's course on software testing <br>
+                    Specialty: quality assurance engineer
+                </li>
+                <li>Сourse on test automation "Automation for everyone"<br>
+                    Specialty: automation quality assurance engineer
+                </li>
+            </ul>
+        </div>
+
+        <div class="aside_box">
+            <h2 class="aside_boxes_name">Languages</h2>
+            <div class="aside_boxes_name_line"></div>
+            <ul class="aside_box_languages_list">
+                <li>Russian - native speaker</li>
+                <li>English - A2 (improving to B1)</li>
+            </ul>
+        </div>
+    </aside>
+        <main class="main_content">
+
+    <div class="main_box">
+        <h2 class="aside_boxes_name">About Myself:</h2>
+        <div class="aside_boxes_name_line"></div>
+        <p>
+            I am 21 years old, at the moment I work as a software testing engineer and study frontend.I like to
+            learn, develop
+            and get better every day. I also continue to study English in order to travel and expand my horizons
+        </p>
+    </div>
+
+
+    <div class="main_box skills ">
+        <div>
+            <h2 class="skills_name">Personal qualities:</h2>
+            <ul class="skills_list">
+                <li>Dependable</li>
+                <li>Team player</li>
+                <li>Learning agility</li>
+                <li>Quality-oriented</li>
+                <li>Attentive</li>
+                <li>Сommunicative</li>
+
+            </ul>
+        </div>
+        <div>
+            <h2 class="skills_name">Special skills:</h2>
+            <ul class="skills_list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript Basics</li>
+                <li>Git, GitHub</li>
+                <li>VS Code, IntelliJ IDEA</li>
+                <li>Figma (for web development)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="main_box">
+        <h2 class="aside_boxes_name">Work experience:</h2>
+       <div class="aside_boxes_name_line"></div>
+       <p>I have experience writing automated tests for the API in postman using JS. there is also experience
+        in testing various web projects.</p>
+    </div>
+
+
+    <div class="main_box">
+        <h2 class="aside_boxes_name">Code Examples:</h2>
+        <div class="aside_boxes_name_line"></div>
+        <pre>
+            <code>
+        let jsonData = pm.response.json();
+        for (let i=0; i&lt;jsonData.length; i++){
+             const req={
+             url: 'http://162.55.220.72:5005/curr_byn',
+             method: 'POST',
+             header: {
+                  'Content-Type': 'multipart/form-data',
+             },
+             body: {
+             mode:'formdata',
+             formdata:[
+                  {key: "auth_token", value:  pm.environment.get("token")},
+                  {key: "curr_code", value:  pm.response.json()[i].Cur_ID}
+             ]},
+             };
+        pm.sendRequest (req, function (err, res) {
+        if (res.code === 500) {return;}
+        else if (res.code === 200 && res.json().Cur_OfficialRate != undefined) {
+        console.log(res.json());
+        }});
+        };</code>
+        </pre>
+    </div>
+
+</main>
+    </div>
+<footer>
+    <div class="overlay_footer">
+
+        <div  class="footer_github">
+            <a href="https://github.com/anastasia-kaz">
+                <div  class="footer_github"></div>
+            </a>
+        </div>
+
+        <div class="footer_year">2022</div>
+
+        <div class="footer_rs_school">
+            <a href="https://rs.school">
+                <div class="footer_rs_school"></div>
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
